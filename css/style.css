@@ -243,10 +243,7 @@ body {
         z-index: 1000;
     }
 
-    .brand-logo {
-        display: none; /* إخفاء حرف الشعار الكبيرة في الهواتف */
-    }
-
+    
     .nav-links {
         flex-direction: row; /* عرض أيقونات التنقل بجانب بعضها */
         gap: 1.5rem;
