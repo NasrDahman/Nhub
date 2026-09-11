@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Hub - الرئيسية</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar-nav">
+        <a href="index.html" class="brand-logo">N</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active" title="الرئيسية"><i class="fas fa-home"></i></a></li>
+            <li><a href="store.html" title="المتجر"><i class="fas fa-th-large"></i></a></li>
+            <li><a href="pricing.html" title="الباقات"><i class="fas fa-tags"></i></a></li>
+            <li><a href="login.html" title="الحساب"><i class="fas fa-user"></i></a></li>
+            <li><a href="contact.html" title="تواصل معنا"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+        <div class="theme-switch-wrapper">
+            <button id="themeToggleBtn" class="theme-toggle-btn" title="تغيير المظهر">
+                <i class="fas fa-adjust"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="content-wrapper">
+        <!-- Top Header -->
+        <header class="top-header">
+            <a href="index.html" class="mobile-brand">N Hub</a>
+            <div class="search-bar-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="form-control custom-search-input" placeholder="ابحث عن منصة...">
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-outline-success position-relative" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Body -->
+        <main class="main-content">
+            <!-- Carousel Slider -->
+            <div id="heroCarousel" class="carousel slide hero-slider mb-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption d-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>أكاديميات ومراجع عالمية</h5>
+                            <p class="small">وصول مباشر لأضخم المكتبات العلمية والبرمجية.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption d-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>أدوات السحاب المتقدمة</h5>
+                            <p class="small">بيئة متكاملة لإدارة بيئات التطوير والشبكات.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <!-- Enhanced Speed Cards Grid -->
+            <h4 class="mb-3 border-end border-3 border-success pe-2">الوصول السريع للمنصات</h4>
+            <div class="row g-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="speed-dial-card text-center p-3">
+                        <div class="card-icon-wrap mb-2"><i class="fas fa-book fa-2x"></i></div>
+                        <h6>IEEE Xplore</h6>
+                        <p class="small text-muted mb-2">الهندسة والتكنولوجيا</p>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-1.json">التفاصيل عبر Ajax</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="speed-dial-card text-center p-3">
+                        <div class="card-icon-wrap mb-2"><i class="fas fa-flask fa-2x"></i></div>
+                        <h6>ScienceDirect</h6>
+                        <p class="small text-muted mb-2">العلوم الطبيعية</p>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-2.json">التفاصيل عبر Ajax</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="speed-dial-card text-center p-3">
+                        <div class="card-icon-wrap mb-2"><i class="fas fa-graduation-cap fa-2x"></i></div>
+                        <h6>SpringerLink</h6>
+                        <p class="small text-muted mb-2">الأبحاث الأكاديمية</p>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-3.json">التفاصيل عبر Ajax</button>
+                    </div>
+                </div>
+                
+                <!-- بطاقة جديدة 1: Scopus -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="speed-dial-card text-center p-3">
+        <div class="card-icon-wrap mb-2"><i class="fas fa-search-plus fa-2x"></i></div>
+        <h6>Scopus Library</h6>
+        <p class="small text-muted mb-2">قواعد البيانات والمراجع</p>
+        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-1.json">التفاصيل عبر Ajax</button>
+    </div>
+</div>
+
+<!-- بطاقة جديدة 2: Nature Research -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="speed-dial-card text-center p-3">
+        <div class="card-icon-wrap mb-2"><i class="fas fa-atom fa-2x"></i></div>
+        <h6>Nature Research</h6>
+        <p class="small text-muted mb-2">الأبحاث الطبية والحيوية</p>
+        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-2.json">التفاصيل عبر Ajax</button>
+    </div>
+</div>
+
+
+<!-- بطاقة جديدة 1: Scopus -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="speed-dial-card text-center p-3">
+        <div class="card-icon-wrap mb-2"><i class="fas fa-search-plus fa-2x"></i></div>
+        <h6>Scopus Library</h6>
+        <p class="small text-muted mb-2">قواعد البيانات والمراجع</p>
+        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-1.json">التفاصيل عبر Ajax</button>
+    </div>
+</div>
+
+<!-- بطاقة جديدة 2: Nature Research -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="speed-dial-card text-center p-3">
+        <div class="card-icon-wrap mb-2"><i class="fas fa-atom fa-2x"></i></div>
+        <h6>Nature Research</h6>
+        <p class="small text-muted mb-2">الأبحاث الطبية والحيوية</p>
+        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-2.json">التفاصيل عبر Ajax</button>
+    </div>
+</div>
+
+
+<!-- بطاقة جديدة 1: Scopus -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="speed-dial-card text-center p-3">
+        <div class="card-icon-wrap mb-2"><i class="fas fa-search-plus fa-2x"></i></div>
+        <h6>Scopus Library</h6>
+        <p class="small text-muted mb-2">قواعد البيانات والمراجع</p>
+        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-1.json">التفاصيل عبر Ajax</button>
+    </div>
+</div>
+
+<!-- بطاقة جديدة 2: Nature Research -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="speed-dial-card text-center p-3">
+        <div class="card-icon-wrap mb-2"><i class="fas fa-atom fa-2x"></i></div>
+        <h6>Nature Research</h6>
+        <p class="small text-muted mb-2">الأبحاث الطبية والحيوية</p>
+        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-2.json">التفاصيل عبر Ajax</button>
+    </div>
+</div>
+
+
+                
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="speed-dial-card text-center p-3">
+                        <div class="card-icon-wrap mb-2"><i class="fas fa-code fa-2x"></i></div>
+                        <h6>ACM Digital Library</h6>
+                        <p class="small text-muted mb-2">علوم الحاسب والبرمجيات</p>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-4.json">التفاصيل عبر Ajax</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p class="mb-0 small">&copy; 2026 N Hub. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+</div>
+
+<!-- Dynamic Ajax Modal -->
+<div class="modal fade" id="ajaxDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="ajaxModalTitle">تفاصيل المنصة</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="ajaxModalContent"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

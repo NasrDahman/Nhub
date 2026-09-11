@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Hub | تواصل معنا</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <aside class="sidebar-nav">
+        <a href="index.html" class="brand-logo">
+            <span>&lt;/&#92;/&gt;</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" title="الرئيسية"><i class="fa fa-home"></i></a></li>
+            <li><a href="store.html" title="المتجر"><i class="fa fa-th-large"></i></a></li>
+            <li><a href="pricing.html" title="الباقات"><i class="fa fa-tags"></i></a></li>
+            <li><a href="login.html" title="الحساب"><i class="fa fa-user"></i></a></li>
+            <li><a href="contact.html" class="active" title="تواصل معنا"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+        <div class="theme-switch-wrapper">
+            <button id="themeToggleBtn" class="theme-toggle-btn" title="تغيير المظهر">
+                <i class="fa fa-adjust"></i>
+            </button>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="top-header">
+            <div class="search-bar-container">
+                <h4 class="mb-0 text-muted">مركز التواصل والدعم الفني</h4>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <div class="contact-card p-4 p-sm-5 h-100">
+                        <h3 class="mb-4">إرسال استفسار مباشر</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label">الاسم الكامل</label>
+                                <input type="text" class="form-control custom-input" id="contactName" placeholder="الاسم" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-control custom-input" id="contactEmail" placeholder="email@domain.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label">نص الرسالة</label>
+                                <textarea class="form-control custom-input" id="contactMessage" rows="4" placeholder="اكتب استفسارك هنا..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-4 py-2">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="contact-info-card p-4 p-sm-5 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="mb-4">قنوات الدعم والربط</h3>
+                            <ul class="list-unstyled contact-list">
+                                <li class="mb-3"><i class="fa fa-envelope-o text-primary me-2"></i> support@nhub.edu</li>
+                                <li class="mb-3"><i class="fa fa-phone text-primary me-2"></i> +967 770 000 000</li>
+                                <li class="mb-3"><i class="fa fa-map-marker text-primary me-2"></i> صنعاء - اليمن</li>
+                            </ul>
+                        </div>
+                        <div class="social-links-wrap mt-4">
+                            <h5>تابعنا على الشبكات:</h5>
+                            <div class="d-flex gap-3 fs-4 mt-2">
+                                <a href="#" class="social-icon"><i class="fa fa-telegram"></i></a>
+                                <a href="#" class="social-icon"><i class="fa fa-github"></i></a>
+                                <a href="#" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer py-4">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2026 N Hub. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <span class="footer-logo">&lt;/&#92;/&gt; N Hub Platform</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto" id="toastTitle">إشعار N Hub</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                تمت العملية بنجاح.
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

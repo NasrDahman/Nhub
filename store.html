@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Hub - المتجر الشامل</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar-nav">
+        <a href="index.html" class="brand-logo">N</a>
+        <ul class="nav-links">
+            <li><a href="index.html" title="الرئيسية"><i class="fas fa-home"></i></a></li>
+            <li><a href="store.html" class="active" title="المتجر"><i class="fas fa-th-large"></i></a></li>
+            <li><a href="pricing.html" title="الباقات"><i class="fas fa-tags"></i></a></li>
+            <li><a href="login.html" title="الحساب"><i class="fas fa-user"></i></a></li>
+            <li><a href="contact.html" title="تواصل معنا"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+        <button id="themeToggleBtn" class="theme-toggle-btn"><i class="fas fa-adjust"></i></button>
+    </aside>
+
+    <div class="content-wrapper">
+        <header class="top-header">
+            <a href="index.html" class="mobile-brand">N Hub</a>
+            <div class="search-bar-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="form-control custom-search-input" placeholder="بحث في المتجر...">
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Filter Controls -->
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <button class="btn btn-custom-accent filter-btn" data-filter="all">الكل</button>
+                <button class="btn btn-outline-secondary filter-btn" data-filter="tech">تكنولوجيا وبرمجة</button>
+                <button class="btn btn-outline-secondary filter-btn" data-filter="science">علوم وطب</button>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="row g-3" id="storePlatformsGrid">
+                <div class="col-12 col-md-6 col-lg-4 platform-item" data-category="tech">
+                    <div class="speed-dial-card p-3 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="fas fa-laptop-code text-success fs-4"></i>
+                                <h5 class="mb-0 fs-6">IEEE Xplore</h5>
+                            </div>
+                            <p class="small text-muted">مكتبة رقمية ضخمة تتيح الوصول للأبحاث والأوراق التقنية الهندسيّة.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-1.json">عرض التفاصيل</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 platform-item" data-category="science">
+                    <div class="speed-dial-card p-3 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="fas fa-vial text-success fs-4"></i>
+                                <h5 class="mb-0 fs-6">ScienceDirect</h5>
+                            </div>
+                            <p class="small text-muted">قاعدة بيانات رئيسية للبحوث العلمية والطبية والدوريات التخصصية.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-2.json">عرض التفاصيل</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 platform-item" data-category="science">
+                    <div class="speed-dial-card p-3 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="fas fa-microscope text-success fs-4"></i>
+                                <h5 class="mb-0 fs-6">SpringerLink</h5>
+                            </div>
+                            <p class="small text-muted">منصة شاملة توفر كتباً ومجلات علمية محكمة في مختلف المجالات.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-3.json">عرض التفاصيل</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 platform-item" data-category="tech">
+                    <div class="speed-dial-card p-3 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="fas fa-server text-success fs-4"></i>
+                                <h5 class="mb-0 fs-6">ACM Digital Library</h5>
+                            </div>
+                            <p class="small text-muted">المصدر الأول للأنظمة والحوسبة وأبحاث البرمجيات والذكاء الاصطناعي.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-success btn-ajax-details w-100" data-platform="data/platform-4.json">عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="modal fade" id="ajaxDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="ajaxModalTitle">تفاصيل المنصة</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="ajaxModalContent"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
