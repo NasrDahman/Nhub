@@ -1,0 +1,290 @@
+/* ==========================================================================
+   N Hub - Main Stylesheet
+   ========================================================================== */
+
+:root {
+    --bg-primary: #0f111a;
+    --bg-secondary: #161925;
+    --card-bg: rgba(22, 25, 37, 0.75);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-color: #00dc82;
+    --accent-hover: #00b368;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --sidebar-width: 80px;
+    --topbar-height: 70px;
+}
+
+[data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --accent-color: #059669;
+    --accent-hover: #047857;
+    --border-color: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+}
+
+/* Base App Layout (Desktop First) */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    width: var(--sidebar-width);
+    background-color: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    z-index: 1000;
+}
+
+.brand-logo {
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    transition: color 0.2s, transform 0.2s;
+    display: block;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--accent-color);
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    margin-right: var(--sidebar-width);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - var(--sidebar-width));
+}
+
+/* Top Header */
+.top-header {
+    height: var(--topbar-height);
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.search-bar-container {
+    position: relative;
+    width: 300px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.custom-search-input {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding-right: 35px;
+    border-radius: 20px;
+}
+
+.custom-search-input:focus {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--accent-color);
+    box-shadow: none;
+}
+
+.mobile-brand {
+    display: none;
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+/* Main Area & Components */
+.main-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.hero-slider {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.hero-slider img {
+    max-height: 380px;
+    object-fit: cover;
+}
+
+/* Glassmorphism Speed Cards */
+.speed-dial-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.speed-dial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.card-icon-wrap {
+    color: var(--accent-color);
+}
+
+.btn-custom-accent {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+}
+
+.btn-custom-accent:hover {
+    background-color: var(--accent-hover);
+    color: #fff;
+}
+
+/* Main Footer */
+.main-footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Mobile Adjustments (Max-width: 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. جعل اتجاه محاذاة الصفحة رأسياً بدلاً من أفقياً */
+    .app-container {
+        flex-direction: column;
+    }
+
+    /* 2. تحويل الشريط إلى أعلى الصفحة تماماً وبشكل أفقي */
+    .sidebar-nav {
+        width: 100%;
+        height: auto;
+        position: relative; /* يلغي التثبيت الجانبي المطلق */
+        top: 0;
+        right: 0;
+        left: 0;
+        flex-direction: row; /* ترتيب العناصر أفقياً */
+        justify-content: space-around;
+        padding: 0.75rem 1rem;
+        border-left: none;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--bg-secondary);
+        z-index: 1000;
+    }
+
+    .brand-logo {
+        display: none; /* إخفاء حرف الشعار الكبيرة في الهواتف */
+    }
+
+    .nav-links {
+        flex-direction: row; /* عرض أيقونات التنقل بجانب بعضها */
+        gap: 1.5rem;
+        width: auto;
+        justify-content: center;
+    }
+
+    /* 3. إلغاء الهامش الأيمن للمحتوى ليعود بعرض الشاشة الكامل */
+    .content-wrapper {
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 4. تعديل الهيدر العلوي */
+    .top-header {
+        padding: 0 1rem;
+        position: relative;
+    }
+
+    .search-bar-container {
+        width: 160px;
+    }
+}
+
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .hero-slider img {
+        max-height: 200px;
+    }
+
+    .speed-dial-card {
+        padding: 1rem !important;
+    }
+
+    .card-icon-wrap i {
+        font-size: 2rem !important;
+    }
+}
